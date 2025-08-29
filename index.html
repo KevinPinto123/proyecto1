@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Space Defenders - Juego Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="hud">
+            <div class="score-panel">
+                <span class="label">Puntuación:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="level-panel">
+                <span class="label">Nivel:</span>
+                <span id="level">1</span>
+            </div>
+            <div class="lives-panel">
+                <span class="label">Vidas:</span>
+                <div id="lives">
+                    <span class="heart">❤️</span>
+                    <span class="heart">❤️</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="menu-overlay" id="menuOverlay">
+            <div class="menu-content">
+                <h1 class="game-title">🚀 SPACE DEFENDERS</h1>
+                <p class="game-subtitle">Defiende la Tierra de la invasión alienígena</p>
+                <button class="btn-primary" id="startBtn">INICIAR JUEGO</button>
+                <div class="controls-info">
+                    <h3>Controles:</h3>
+                    <p>← → Mover nave</p>
+                    <p>ESPACIO Disparar</p>
+                    <p>P Pausar</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-over-overlay" id="gameOverOverlay">
+            <div class="menu-content">
+                <h1 class="game-over-title">GAME OVER</h1>
+                <p class="final-score">Puntuación Final: <span id="finalScore">0</span></p>
+                <button class="btn-primary" id="restartBtn">JUGAR DE NUEVO</button>
+                <button class="btn-secondary" id="menuBtn">MENÚ PRINCIPAL</button>
+            </div>
+        </div>
+        
+        <div class="pause-overlay" id="pauseOverlay">
+            <div class="menu-content">
+                <h2>JUEGO PAUSADO</h2>
+                <button class="btn-primary" id="resumeBtn">CONTINUAR</button>
+                <button class="btn-secondary" id="pauseMenuBtn">MENÚ PRINCIPAL</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
